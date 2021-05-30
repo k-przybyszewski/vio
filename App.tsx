@@ -1,21 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from "react";
+import { Text, View } from 'react-native';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { TodoView } from './src/views/todo';
+import { User } from './src/model/model';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <View>
+          <Text>Open up App.tsx to start working on your app!</Text>
+          {/* <Link to={`/login`}>Login</Link> */}
+          <Link to={`/todo`}>TODO APP</Link>
+
+          {/* <Route path="/login"><LoginView></LoginView></Route> */}
+          <Route path="/todo"><TodoView></TodoView></Route>
+          <StatusBar style="auto" />
+        </View>
+      </Router>
+    );
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
