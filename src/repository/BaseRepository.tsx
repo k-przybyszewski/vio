@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const API_BASE_URL = "https://ttapi.detour.pl"
-
 export class BaseRepository {
   
   constructor(private path: string) {}

@@ -4,6 +4,7 @@ import { View } from 'react-native';
 import { ProjectsView } from './src/views/ProjectsView';
 import { StatusBar } from 'expo-status-bar';
 import { TicketsView } from './src/views/TicketsView';
+import { PandaView } from './src/views/PandaView';
 import { Login } from './src/components/Login';
 import { Kernel } from './src/Kernel'
 
@@ -11,16 +12,15 @@ class App extends React.Component {
 
   kernel?: Kernel;
 
-  componentDidMount() {
-  }
+  componentDidMount() {}
 
   render() {
     return (
       <Router>
-        <div>
-          <Login></Login>
-        </div>
         <View>
+          <Route path="/pandascore">
+            <PandaView></PandaView>
+          </Route> 
           <Route path="/tickets">
             <TicketsView></TicketsView>
           </Route>          

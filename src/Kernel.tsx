@@ -1,5 +1,7 @@
 export class Kernel {
 
+    constructor(env: string) {}
+
     isDev(): Boolean  {
         return false;
     }
