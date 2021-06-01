@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { ProjectsView } from './src/views/ProjectsView';
 import { StatusBar } from 'expo-status-bar';
 import { TicketsView } from './src/views/TicketsView';
@@ -17,7 +17,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <View>
+        <View style={styles.container}>
           <Route path="/pandascore">
             <PandaView></PandaView>
           </Route> 
@@ -33,5 +33,14 @@ class App extends React.Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 export default App;
