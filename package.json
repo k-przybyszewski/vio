@@ -27,6 +27,7 @@
     "@expo/webpack-config": "^0.12.75",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
+    "@types/react-router-dom": "^5.1.7",
     "@types/webpack": "^5.28.0",
     "typescript": "~4.0.0",
     "webpack": "^5.38.1",
