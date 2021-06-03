@@ -8,5 +8,5 @@ export class Kernel {
 
     bootstrap(): Boolean {
         return false
-    }    
+    }
 }
