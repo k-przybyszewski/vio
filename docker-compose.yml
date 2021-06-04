@@ -1,9 +1,9 @@
 version: '3.9'
 
 services:
-  vio:
+  vioweb:
     image: nginx:latest
-    container_name: vio
+    container_name: vioweb
     network_mode: host
     volumes:
       - "${PWD}/dist:/var/www/html:rw"
